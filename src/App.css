@@ -1,0 +1,13 @@
+body {
+    background: yellow;
+    color: black;
+}
+
+.header {
+    font-size: small;
+}
+
+.carrousel > .row {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+}
