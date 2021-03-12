@@ -1,6 +1,6 @@
 import React from "react";
 
-// Create the search box to update as the user inputs the text as props.
+// Create the search box to update as the user inputs the text
 
 const SearchMovie = (props) => {
     return (
