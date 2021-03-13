@@ -3,7 +3,7 @@ import React from 'react'
 const CompareMovies = () => {
     return (
         <>
-            <h3 className="mr-2">
+            <h3 className="">
                 Compare
             </h3>
             <svg

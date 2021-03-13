@@ -6,7 +6,7 @@ import DeleteComparison from "./components/DeleteComparison";
 import SearchMovie from "./components/SearchMovie";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
+import "./styles/App.css";
 
 
 const App = () => {
@@ -73,7 +73,7 @@ const App = () => {
   return (
     <div className="container-fluid carrousel">
 
-      <div className="row d-flex align-items-center mt-3 mb-5">
+      <div className=" title row d-flex align-items-center mt-3 mb-1">
         <Header className="header" header="Movie Night" />
         <SearchMovie movieQuery={movieQuery} setMovieQuery={setMovieQuery} />
       </div>
@@ -82,7 +82,7 @@ const App = () => {
         <Movies movies={movies} CompareMovies={CompareMovies} handleComparison={selectedMovie} />
       </div>
 
-      <div className="row d-flex align-items-center mt-3 mb-5">
+      <div className="title row d-flex align-items-center mt-3 mb-1">
         <Header className="header" header="Compare Movies" />
       </div>
 

@@ -1,6 +1,6 @@
 body {
-    background: antiquewhite;
-    color: black;
+    background: #1F2833;
+    color: white;
 }
 
 .header {
@@ -8,7 +8,13 @@ body {
 }
 
 .header-box {
-    font-size: 1.2em;
+    font-size: 0.5em;
+    padding-bottom: 1em;
+}
+
+.title {
+    font-size: smaller;
+    font-weight: 100;
 }
 
 .carrousel > .row {
@@ -18,14 +24,20 @@ body {
 
 .movie-card {
     position: relative;
-    background-color: darkkhaki;
+    background-color: #C5C6C7;
+    color: #1F2833;
     height: 10em;
+    width: 15em;
     transition: 0.3s;
+    border-radius: 1em 0 0em 2em;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
+
 
 .movie-card:hover{
     cursor: pointer;
     transform: scale(1.1);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 .movie-card:hover .selected{
@@ -35,7 +47,7 @@ body {
 
 .selected {
     position: absolute;
-    background: rgba(30, 184, 10, 0.3);
+    background: rgba(246, 76, 114, 0.3);
     opacity: 0;
     height: 100%;
     padding: 3.21em;
