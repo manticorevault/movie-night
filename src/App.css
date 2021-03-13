@@ -4,7 +4,11 @@ body {
 }
 
 .header {
-    font-size: 10px;
+    font-size: 1.2em;
+}
+
+.header-box {
+    font-size: small;
 }
 
 .carrousel > .row {

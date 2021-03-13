@@ -6,7 +6,7 @@ const Header = (props) => {
 
     return (
         <header>
-            <div className="col">
+            <div className="col header-box">
                 <h1>{props.header}</h1>
             </div>
         </header>

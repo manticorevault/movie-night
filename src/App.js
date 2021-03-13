@@ -41,6 +41,9 @@ const App = () => {
   const selectedMovie = (movie) => {
     const moviesToCompare = [...compare, movie]
     setCompare(moviesToCompare);
+
+    // Persist movies to the localStorage using rememberSelection()
+    rememberSelection(moviesToCompare);
   }
 
   // Filter out movies from the Compared List
@@ -50,6 +53,11 @@ const App = () => {
     )
 
     setCompare(moviesToCompare);
+  }
+
+  // Use localStorage to persist items on the browser even if the user reloads.
+  const rememberSelection = (items) => {
+    localStorage.setItem("movies-to-compare", JSON.stringify(items))
   }
 
   return (
