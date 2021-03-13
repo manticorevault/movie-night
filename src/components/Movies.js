@@ -10,7 +10,7 @@ const Movies = (props) => {
                     <div className="info-box">
                         <h1 className="movie-title"> {movie.Title} </h1>
                         <h1 className="movie-year"> {movie.Year} </h1>
-                        <h1 className="movie-id"> {movie.imdbID} </h1>
+                        <h1 className="movie-id"> {movie.Genre} </h1>
                     </div>
                     <div className="movie-poster">
                         <img src={movie.Poster} alt="movie poster"></img>
