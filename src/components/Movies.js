@@ -9,10 +9,11 @@ const Movies = (props) => {
                     <div>
                         <h1 className="movie-title"> {movie.Title} </h1>
                         <h1 className="movie-year"> {movie.Year} </h1>
-                        <h5> {movie.imdbID} </h5>
+                        <h1> {movie.imdbID} </h1>
+                        <p href="/"> More Info </p>
                     </div>
                     <div>
-                        <img className="movie-poster" src={movie.Poster} alt="movie poster"></img>
+                        <img src={movie.Poster} alt="movie poster"></img>
                     </div>
 
                     <div className="d-flex align-items-right justify-content-right selected" onClick={() => props.handleComparison(movie)}>
