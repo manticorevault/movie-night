@@ -38,6 +38,15 @@ const App = () => {
     fetchMovies(movieQuery);
   }, [movieQuery])
 
+  // useEffect to persist movies on load by setting the comparison state to the rememberSelection function.
+  useEffect(() => {
+    const persistedMovies = JSON.parse(localStorage.getItem("movies-to-persist"))
+
+    if (persistedMovies) {
+      setCompare(persistedMovies)
+    }
+  }, []);
+
   const selectedMovie = (movie) => {
     const moviesToCompare = [...compare, movie]
     setCompare(moviesToCompare);
@@ -57,7 +66,7 @@ const App = () => {
 
   // Use localStorage to persist items on the browser even if the user reloads.
   const rememberSelection = (items) => {
-    localStorage.setItem("movies-to-compare", JSON.stringify(items))
+    localStorage.setItem("movies-to-persist", JSON.stringify(items))
   }
 
   return (
