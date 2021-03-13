@@ -8,7 +8,7 @@ body {
 }
 
 .header-box {
-    font-size: small;
+    font-size: 1.2em;
 }
 
 .carrousel > .row {
@@ -35,14 +35,14 @@ body {
 
 .selected {
     position: absolute;
-    background: rgba(30, 255, 0, 0.8);
+    background: rgba(30, 184, 10, 0.3);
     opacity: 0;
-    width: 100%;
-    padding: 1em;
+    height: 100%;
+    padding: 3.21em;
     font-size: 1em;
     transition: 0.5 ease;
     text-align: center;
-    bottom: 0;
+    right: 0;
 }
 
 .info-box {

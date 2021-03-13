@@ -2,6 +2,7 @@ import React from 'react'
 
 // Search for movies using and "input" query as props, and then display the Movie Cards using the Poster argument
 const Movies = (props) => {
+
     return (
         <>
             {props.movies.map((movie, index) => (
