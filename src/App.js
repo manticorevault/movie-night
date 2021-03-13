@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Movies from "./components/Movies"
 import Header from "./components/Header";
+import CompareMovies from "./components/CompareMovies";
+import DeleteComparison from "./components/DeleteComparison";
 import SearchMovie from "./components/SearchMovie";
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -14,7 +16,7 @@ const App = () => {
   const [movieQuery, setMovieQuery] = useState("")
 
   // Create a state for the comparison list
-  //const []
+  const [compare, setCompare] = useState([]);
 
   // Make a get request to the API and fetch movies based on the search query.
   const fetchMovies = async (movieQuery) => {
@@ -35,6 +37,20 @@ const App = () => {
     fetchMovies(movieQuery);
   }, [movieQuery])
 
+  const selectedMovie = (movie) => {
+    const moviesToCompare = [...compare, movie]
+    setCompare(moviesToCompare);
+  }
+
+  // Filter out movies from the Compared List
+  const removeSelection = (movie) => {
+    const moviesToCompare = compare.filter(
+      (comparedMovie) => comparedMovie.imdbID !== movie.imdbID
+    )
+
+    setCompare(moviesToCompare);
+  }
+
   return (
     <div className="container-fluid carrousel">
 
@@ -43,10 +59,20 @@ const App = () => {
         <SearchMovie movieQuery={movieQuery} setMovieQuery={setMovieQuery} />
       </div>
 
+      <div className="row display-card">
+        <Movies movies={movies} compareMovies={CompareMovies} handleComparison={selectedMovie} />
+      </div>
+
+      <div className="row d-flex align-items-center mt-3 mb-5">
+        <Header className="header" header="Compare Movies" />
+      </div>
+
       <div className="row">
-        <Movies movies={movies} />
+        <Movies movies={compare} compareMovies={DeleteComparison} handleComparison={removeSelection} />
       </div>
     </div>
+
+
   )
 }
 

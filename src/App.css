@@ -1,10 +1,10 @@
 body {
-    background: yellow;
+    background: antiquewhite;
     color: black;
 }
 
 .header {
-    font-size: small;
+    font-size: 10px;
 }
 
 .carrousel > .row {
@@ -12,3 +12,44 @@ body {
     flex-wrap: nowrap;
 }
 
+.movie-card {
+    position: relative;
+    background-color: darkkhaki;
+    height: 10em;
+    transition: 0.3s;
+}
+
+.movie-card:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.movie-card:hover .selected{
+    color: antiquewhite;
+    opacity: 1.1;
+}
+
+.selected {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    width: 100%;
+    padding: 1em;
+    font-size: 1em;
+    transition: 0.5 ease;
+    text-align: center;
+    bottom: 0;
+}
+
+.movie-title {
+    font-size: 0.8em;
+}
+
+.movie-year {
+    font-size: 0.5em;
+}
+
+
+.form-control {
+    width: 100%;
+}
