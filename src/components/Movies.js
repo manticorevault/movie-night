@@ -6,13 +6,12 @@ const Movies = (props) => {
         <>
             {props.movies.map((movie, index) => (
                 <div className='movie-card d-flex justify-content-start m-3'>
-                    <div>
+                    <div className="info-box">
                         <h1 className="movie-title"> {movie.Title} </h1>
                         <h1 className="movie-year"> {movie.Year} </h1>
-                        <h1> {movie.imdbID} </h1>
-                        <p href="/"> More Info </p>
+                        <h1 className="movie-id"> {movie.imdbID} </h1>
                     </div>
-                    <div>
+                    <div className="movie-poster">
                         <img src={movie.Poster} alt="movie poster"></img>
                     </div>
 
@@ -25,4 +24,7 @@ const Movies = (props) => {
     )
 }
 
+
+
 export default Movies;
+

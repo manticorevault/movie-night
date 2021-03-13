@@ -19,10 +19,6 @@ body {
     transition: 0.3s;
 }
 
-.movie-card > img {
-    height: ;
-}
-
 .movie-card:hover{
     cursor: pointer;
     transform: scale(1.1);
@@ -35,7 +31,7 @@ body {
 
 .selected {
     position: absolute;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(30, 255, 0, 0.8);
     opacity: 0;
     width: 100%;
     padding: 1em;
@@ -43,6 +39,12 @@ body {
     transition: 0.5 ease;
     text-align: center;
     bottom: 0;
+}
+
+.info-box {
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-right: 5em;
 }
 
 .movie-title {
@@ -53,7 +55,14 @@ body {
     font-size: 0.5em;
 }
 
+.movie-id {
+    font-size: 0.6em;
+}
+
+.movie-poster > img {
+    max-height: 10em;
+}
 
 .form-control {
-    width: 100%;
+    width: 10em;
 }

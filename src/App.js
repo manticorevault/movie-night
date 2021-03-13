@@ -27,7 +27,7 @@ const App = () => {
     const res = await fetch(movieUrl);
     const resJson = await res.json();
 
-    // Only use the Search parameter from the API if the it exists.
+    // Only use the Search parameter from the API if the query exists.
     if (resJson.Search) {
       setMovies(resJson.Search);
     }
@@ -61,7 +61,7 @@ const App = () => {
       </div>
 
       <div className="row display-card">
-        <Movies movies={movies} compareMovies={CompareMovies} handleComparison={selectedMovie} />
+        <Movies movies={movies} CompareMovies={CompareMovies} handleComparison={selectedMovie} />
       </div>
 
       <div className="row d-flex align-items-center mt-3 mb-5">
@@ -69,7 +69,7 @@ const App = () => {
       </div>
 
       <div className="row">
-        <Movies movies={compare} compareMovies={DeleteComparison} handleComparison={removeSelection} />
+        <Movies movies={compare} CompareMovies={DeleteComparison} handleComparison={removeSelection} />
       </div>
     </div>
 
