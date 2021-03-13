@@ -6,7 +6,7 @@ const Movies = (props) => {
     return (
         <>
             {props.movies.map((movie, index) => (
-                <div className='movie-card d-flex justify-content-start m-3'>
+                <div className='movie-card d-flex justify-content-start m-3 mb-5'>
                     <div className="info-box">
                         <h1 className="movie-title"> {movie.Title} </h1>
                         <h1 className="movie-year"> {movie.Year} </h1>

@@ -20,7 +20,7 @@ const App = () => {
 
   // Make a get request to the API and fetch movies based on the search query.
   const fetchMovies = async (movieQuery) => {
-    const movieUrl = `http://www.omdbapi.com/?s=${movieQuery}&apikey=${process.env.REACT_APP_OMDB_API_KEY}&plot=full`
+    const movieUrl = `http://www.omdbapi.com/?s=${movieQuery}&apikey=61e89a99&plot=full`
     // const singleMovieUrl = `http://www.omdbapi.com/?t=${movieQuery}&apikey=${process.env.REACT_APP_OMDB_API_KEY}`
     // const singleMovieUrl = `http://www.omdbapi.com/?s=${movieQuery.imdbID}&apikey=${process.env.REACT_APP_OMDB_API_KEY}`
 
@@ -82,7 +82,7 @@ const App = () => {
         <Movies movies={movies} CompareMovies={CompareMovies} handleComparison={selectedMovie} />
       </div>
 
-      <div className="title row d-flex align-items-center mt-3 mb-1">
+      <div className="title row d-flex align-items-center mt-5 mb-1">
         <Header className="header" header="Compare Movies" />
       </div>
 
